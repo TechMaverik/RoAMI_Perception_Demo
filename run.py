@@ -12,7 +12,7 @@ from apps.config import config_dict
 from apps import create_app, db
 
 # WARNING: Don't run with debug turned on in production!
-DEBUG = (os.getenv('DEBUG', 'True') == 'True')
+DEBUG = (os.getenv('DEBUG', 'False') == 'True')
 
 # The configuration
 get_config_mode = 'Debug' if DEBUG else 'Production'
