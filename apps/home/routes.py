@@ -14,6 +14,7 @@ from jinja2 import TemplateNotFound
 def index():
 
     return render_template('home/index.html', segment='index')
+    #return render_template('home/lost_sales.html', segment='lost_sales')
 
 
 @blueprint.route('/<template>')
