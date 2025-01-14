@@ -148,16 +148,16 @@ If you have questions or need help integrating the product please [contact us](h
 
 ## Licensing
 
-- Copyright 2019 - present [Creative Tim](https://www.creative-tim.com/)
-- Licensed under [Creative Tim EULA](https://www.creative-tim.com/license)
+- Copyright 2019 - present [www.roboami.com](https://www.creative-tim.com/)
+- Licensed under [www.roboami.com EULA](https://www.creative-tim.com/license)
 
 <br />
 
 ## Useful Links
 
-- [More products](https://www.creative-tim.com/bootstrap-themes) from Creative Tim
+- [More products](https://www.creative-tim.com/bootstrap-themes) from www.roboami.com
 - [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
-- [Freebies](https://www.creative-tim.com/bootstrap-themes/free) from Creative Tim
+- [Freebies](https://www.creative-tim.com/bootstrap-themes/free) from www.roboami.com
 - [Affiliate Program](https://www.creative-tim.com/affiliates/new) (earn money)
 
 <br />
@@ -172,4 +172,4 @@ If you have questions or need help integrating the product please [contact us](h
 <br />
 
 ---
-[Material Dashboard Flask](https://www.creative-tim.com/product/material-dashboard-flask) - Provided by [Creative Tim](https://www.creative-tim.com/) and [AppSeed](https://appseed.us)
+[Material Dashboard Flask](https://www.creative-tim.com/product/material-dashboard-flask) - Provided by [www.roboami.com](https://www.creative-tim.com/) and [AppSeed](https://appseed.us)
