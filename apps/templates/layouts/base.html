@@ -34,7 +34,14 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="/static/assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
-
+  <style>
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button 
+    { 
+      -webkit-appearance: none; 
+      margin: 0; 
+    }
+   </style>
   {% block stylesheets %}{% endblock stylesheets %}
 
 </head> 
