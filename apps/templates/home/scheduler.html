@@ -1,0 +1,628 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="container-fluid py-4">
+      <div class="row mb-4">
+        <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+          <div class="card">
+            <div class="card-header pb-0">
+              <div class="row">
+                <div class="col-lg-6 col-7">
+                  <h6>Scheduler</h6>
+                </div>
+                <div class="col-lg-6 col-5 my-auto text-end">
+                  <div class="dropdown float-lg-end pe-4">
+                    <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa fa-ellipsis-v text-secondary"></i>
+                    </a>
+                    <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
+                      <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
+                      <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
+                      <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body px-0 pb-2">
+              <div class="table-responsive">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-11">Job</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Container</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Last run</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Next Scheduled Run</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Roami Run</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Main</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">14-01-2025</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">15-01-2025</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td class="align-middle">
+                        <div style=" border-radius: 5px; background-color: limegreen; text-align: center; color: white;" class="mb-0 text-sm">Done</div>
+                      </td>
+
+                      <td class="align-middle text-center text-sm">
+                        <img src="/static/assets/img/icons/icons8-play-button-48.png" width="30%">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Scan New Products</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Main</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">12-01-2025</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">19-01-2025</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td class="align-middle">
+                        <div style=" border-radius: 5px; background-color: gold; text-align: center; color: white;" class="mb-0 text-sm">Standby</div>
+                      </td>
+
+                      <td class="align-middle text-center text-sm">
+                        <img src="/static/assets/img/icons/icons8-play-button-48.png" width="30%">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Check Shelves</h6>
+                          </div>
+                        </div>
+                      </td>
+                      
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Main</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">10-01-2025</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm"></h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td class="align-middle">
+                        <div style=" border-radius: 5px; background-color: limegreen; text-align: center; color: white;" class="mb-0 text-sm">Done</div>
+                      </td>
+
+                      <td class="align-middle text-center text-sm">
+                        <img src="/static/assets/img/icons/icons8-play-button-48.png" width="30%">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">IOT device ON</h6>
+                          </div>
+                        </div>
+                      </td>
+                      
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Main</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">06:25 | 15-01-2025</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">06:25 | 16-01-2025</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td class="align-middle">
+                        <div style=" border-radius: 5px; background-color: gold; text-align: center; color: white;" class="mb-0 text-sm">Standby</div>
+                      </td>
+
+                      <td class="align-middle text-center text-sm">
+                        <img src="/static/assets/img/icons/icons8-play-button-48.png" width="30%">
+                      </td>
+
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">IOT device OFF</h6>
+                          </div>
+                        </div>
+                      </td>
+                      
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Main</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">23:45 | 14-01-2025</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">23:45 | 15-01-2025</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td class="align-middle">
+                        <div style=" border-radius: 5px; background-color: limegreen; text-align: center; color: white;" class="mb-0 text-sm">Done</div>
+                      </td>
+
+                      <td class="align-middle text-center text-sm">
+                        <img src="/static/assets/img/icons/icons8-play-button-48.png" width="30%">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Custom Script 01</h6>
+                          </div>
+                        </div>
+                      </td>
+                      
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Main</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">14-01-2025</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">15-01-2025</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td class="align-middle">
+                        <div style=" border-radius: 5px; background-color: tomato; text-align: center; color: white;" class="mb-0 text-sm">Error #11</div>
+                      </td>
+
+                      <td class="align-middle text-center text-sm">
+                        <img src="/static/assets/img/icons/icons8-play-button-48.png" width="30%">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Custom Script 02</h6>
+                          </div>
+                        </div>
+                      </td>
+                      
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Main</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">14-01-2025</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">15-01-2025</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td class="align-middle">
+                        <div style=" border-radius: 5px; background-color: limegreen; text-align: center; color: white;" class="mb-0 text-sm">Done</div>
+                      </td>
+
+                      <td class="align-middle text-center text-sm">
+                        <img src="/static/assets/img/icons/icons8-play-button-48.png" width="30%">
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100">
+            <div class="card-header pb-0">
+              <h6>General Insights and Tips</h6>
+              <p class="text-sm">
+                <i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
+                <span class="font-weight-bold">24%</span> probability of increase sale for Product A this month. It is advisable to keep a
+                go down stock value of 100 count,
+              </p>
+              <h6>More Perception</h6>
+              <p><a href="">Missing Items</a></p>
+              <p><a href="">Out of shelf Rate</a></p>
+              <p><a href="">Out of shelf Events</a></p>
+              <p><a href="">Current People in Store</a></p>
+              <p><a href="">Least and Most selling product</a></p>
+              <p><a href="">Out of shelf with inventory on hand.</a></p>   
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% include 'includes/footer.html' %}
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+  <script src="/static/assets/js/plugins/chartjs.min.js"></script>
+  <script>
+    var ctx = document.getElementById("chart-bars").getContext("2d");
+
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["M", "T", "W", "T", "F", "S", "S"],
+        datasets: [{
+          label: "Sales",
+          tension: 0.4,
+          borderWidth: 0,
+          borderRadius: 4,
+          borderSkipped: false,
+          backgroundColor: "rgba(255, 255, 255, .8)",
+          data: [50, 20, 10, 22, 50, 10, 40],
+          maxBarThickness: 6
+        }, ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          }
+        },
+        interaction: {
+          intersect: false,
+          mode: 'index',
+        },
+        scales: {
+          y: {
+            grid: {
+              drawBorder: false,
+              display: true,
+              drawOnChartArea: true,
+              drawTicks: false,
+              borderDash: [5, 5],
+              color: 'rgba(255, 255, 255, .2)'
+            },
+            ticks: {
+              suggestedMin: 0,
+              suggestedMax: 500,
+              beginAtZero: true,
+              padding: 10,
+              font: {
+                size: 14,
+                weight: 300,
+                family: "Roboto",
+                style: 'normal',
+                lineHeight: 2
+              },
+              color: "#fff"
+            },
+          },
+          x: {
+            grid: {
+              drawBorder: false,
+              display: true,
+              drawOnChartArea: true,
+              drawTicks: false,
+              borderDash: [5, 5],
+              color: 'rgba(255, 255, 255, .2)'
+            },
+            ticks: {
+              display: true,
+              color: '#f8f9fa',
+              padding: 10,
+              font: {
+                size: 14,
+                weight: 300,
+                family: "Roboto",
+                style: 'normal',
+                lineHeight: 2
+              },
+            }
+          },
+        },
+      },
+    });
+
+
+    var ctx2 = document.getElementById("chart-line").getContext("2d");
+
+    new Chart(ctx2, {
+      type: "line",
+      data: {
+        labels: ["A", "B", "C", "D", "E", "F", "G", "H", "I"],
+        datasets: [{
+          label: "Customer Visits",
+          tension: 0,
+          borderWidth: 0,
+          pointRadius: 5,
+          pointBackgroundColor: "rgba(255, 255, 255, .8)",
+          pointBorderColor: "transparent",
+          borderColor: "rgba(255, 255, 255, .8)",
+          borderColor: "rgba(255, 255, 255, .8)",
+          borderWidth: 4,
+          backgroundColor: "transparent",
+          fill: true,
+          data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+          maxBarThickness: 6
+
+        }],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          }
+        },
+        interaction: {
+          intersect: false,
+          mode: 'index',
+        },
+        scales: {
+          y: {
+            grid: {
+              drawBorder: false,
+              display: true,
+              drawOnChartArea: true,
+              drawTicks: false,
+              borderDash: [5, 5],
+              color: 'rgba(255, 255, 255, .2)'
+            },
+            ticks: {
+              display: true,
+              color: '#f8f9fa',
+              padding: 10,
+              font: {
+                size: 14,
+                weight: 300,
+                family: "Roboto",
+                style: 'normal',
+                lineHeight: 2
+              },
+            }
+          },
+          x: {
+            grid: {
+              drawBorder: false,
+              display: false,
+              drawOnChartArea: false,
+              drawTicks: false,
+              borderDash: [5, 5]
+            },
+            ticks: {
+              display: true,
+              color: '#f8f9fa',
+              padding: 10,
+              font: {
+                size: 14,
+                weight: 300,
+                family: "Roboto",
+                style: 'normal',
+                lineHeight: 2
+              },
+            }
+          },
+        },
+      },
+    });
+
+    var ctx3 = document.getElementById("chart-line-tasks").getContext("2d");
+
+    new Chart(ctx3, {
+      type: "line",
+      data: {
+        labels: ["A", "B", "C", "D", "E", "F", "G", "H", "I"],
+        datasets: [{
+          label: "Out of Shelf Rate",
+          tension: 0,
+          borderWidth: 0,
+          pointRadius: 5,
+          pointBackgroundColor: "rgba(255, 255, 255, .8)",
+          pointBorderColor: "transparent",
+          borderColor: "rgba(255, 255, 255, .8)",
+          borderWidth: 4,
+          backgroundColor: "transparent",
+          fill: true,
+          data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+          maxBarThickness: 6
+
+        }],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          }
+        },
+        interaction: {
+          intersect: false,
+          mode: 'index',
+        },
+        scales: {
+          y: {
+            grid: {
+              drawBorder: false,
+              display: true,
+              drawOnChartArea: true,
+              drawTicks: false,
+              borderDash: [5, 5],
+              color: 'rgba(255, 255, 255, .2)'
+            },
+            ticks: {
+              display: true,
+              padding: 10,
+              color: '#f8f9fa',
+              font: {
+                size: 14,
+                weight: 300,
+                family: "Roboto",
+                style: 'normal',
+                lineHeight: 2
+              },
+            }
+          },
+          x: {
+            grid: {
+              drawBorder: false,
+              display: false,
+              drawOnChartArea: false,
+              drawTicks: false,
+              borderDash: [5, 5]
+            },
+            ticks: {
+              display: true,
+              color: '#f8f9fa',
+              padding: 10,
+              font: {
+                size: 14,
+                weight: 300,
+                family: "Roboto",
+                style: 'normal',
+                lineHeight: 2
+              },
+            }
+          },
+        },
+      },
+    });
+  </script>
+
+{% endblock javascripts %}
